@@ -34,7 +34,6 @@
 		6388AC4119D753D000644261 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6388AC4219D753D000644261 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6388AC4319D753D000644261 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		6388AC4B19D7557400644261 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		63DC67ED1336AC5D00B4B67E /* Lev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lev-Info.plist"; sourceTree = "<group>"; };
 		63F1EF571BC0D361000A50B3 /* LevView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevView.h; sourceTree = "<group>"; };
 		63F1EF581BC0D361000A50B3 /* LevView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevView.m; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		63F1EF5B1BC0E402000A50B3 /* LevTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevTouch.m; sourceTree = "<group>"; };
 		63F1EF5D1BC0EB8D000A50B3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		63F1EF5F1BC0F279000A50B3 /* LevAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevAppDelegate.h; sourceTree = "<group>"; };
+		63F1EF601BC16D6E000A50B3 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				6388AC4B19D7557400644261 /* ReadMe.txt */,
+				63F1EF601BC16D6E000A50B3 /* ReadMe.md */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				63DC67EB1336AC5D00B4B67E /* Resources */,
