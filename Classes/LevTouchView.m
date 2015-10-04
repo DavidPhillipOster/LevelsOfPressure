@@ -1,7 +1,9 @@
 //  Created by David Phillip Oster on 10/03/2015.
 //  Apache Version 2 License
 
-#import "LevView.h"
+#import "LevTouchView.h"
+
+#import "LevGraphView.h"
 #import "LevTouch.h"
 
 
@@ -35,25 +37,43 @@
 
 @end
 
-@interface LevView()
+@interface LevTouchView()
 // The model of this app is this NSSet of LevTouch.
+@property(nonatomic) LevGraphView *graphView;
 @property(nonatomic) NSMutableSet *myTouches;
+@property(nonatomic) int lastIndex;
 @end
 
-@implementation LevView
+@implementation LevTouchView
 
 - (instancetype)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
     self.multipleTouchEnabled = YES;
     self.myTouches = [NSMutableSet set];
+    self.graphView = [[LevGraphView alloc] initWithFrame:CGRectZero];
+    [self.graphView setUserInteractionEnabled:NO];
+    [self.graphView setBackgroundColor:[UIColor clearColor]];
+    [self addSubview:self.graphView];
   }
   return self;
+}
+
+- (void)layoutSubviews {
+  [super layoutSubviews];
+  enum {
+    kGraphHeight = 120
+  };
+  CGRect graphFrame = self.bounds;
+  graphFrame.origin.y += graphFrame.size.height - kGraphHeight;
+  graphFrame.size.height = kGraphHeight;
+  [self.graphView setFrame:graphFrame];
 }
 
 - (BOOL)canBecomeFirstResponder {
   return YES;
 }
+
 
 - (void)drawRect:(CGRect)rect {
   CGContextRef c = UIGraphicsGetCurrentContext();
@@ -75,6 +95,9 @@
   for (LevTouch *touch in self.myTouches) {
     if (PointEqualToPoint(touch.location, newTouch.previousLocation)) {
       touch.location = newTouch.location;
+      if (touch.majorRadius != newTouch.majorRadius) {
+        [self.graphView setNeedsDisplay];
+      }
       touch.majorRadius = newTouch.majorRadius;
       touch.previousLocation = newTouch.previousLocation;
       touch.previousMajorRadius = newTouch.previousMajorRadius;
@@ -83,11 +106,40 @@
   }
 }
 
+// Other parts of this object call this when the state changes.
+// It updates the statistics and arranges for redrawing.
+- (void)updateDisplay {
+  for (LevTouch *levTouch in self.myTouches) {
+    if (_graphView.maxRadius < levTouch.majorRadius) {
+      _graphView.maxRadius = levTouch.majorRadius;
+    }
+  }
+  [self setNeedsDisplay];
+}
+
+- (void)rebuildTouchArray {
+  NSMutableArray *touches = [[self.myTouches allObjects] mutableCopy];
+  [touches sortUsingComparator:^(id obj1, id obj2) {
+    LevTouch *a = (LevTouch *)obj1;
+    LevTouch *b = (LevTouch *)obj2;
+    if (a.index < b.index) {
+      return NSOrderedAscending;
+    } if (b.index < a.index) {
+      return NSOrderedDescending;
+    } else {
+      return NSOrderedSame;
+    }
+  }];
+  if (![touches isEqual:self.graphView.touches]) {
+    self.graphView.touches = touches;
+  }
+}
+
 - (void)updateSet:(NSSet *)set {
   for (LevTouch *newTouch in set) {
     [self updateTouch:newTouch];
   }
-  [self setNeedsDisplay];
+  [self updateDisplay];
 }
 
 - (void)minusSet:(NSSet *)set {
@@ -98,12 +150,21 @@
     }
   }
   self.myTouches = newSet;
-  [self setNeedsDisplay];
+  if (0 == [self.myTouches count]) {
+    self.lastIndex = 0;
+  }
+  [self rebuildTouchArray];
+  [self updateDisplay];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
-  [self.myTouches unionSet:[touches asSetOfLevTouchesInView:self]];
-  [self setNeedsDisplay];
+  NSSet *levTouchSet = [touches asSetOfLevTouchesInView:self];
+  for (LevTouch *levTouch in levTouchSet) {
+    levTouch.index = self.lastIndex++;
+  }
+  [self.myTouches unionSet:levTouchSet];
+  [self rebuildTouchArray];
+  [self updateDisplay];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
@@ -116,7 +177,8 @@
 
 - (void)touchesCancelled:(nullable NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
   [self.myTouches removeAllObjects];
-  [self setNeedsDisplay];
+  self.lastIndex = 0;
+  [self updateDisplay];
 }
 
 

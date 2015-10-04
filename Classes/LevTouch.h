@@ -10,6 +10,7 @@
 @property(nonatomic) CGPoint previousLocation;
 @property(nonatomic) CGFloat majorRadius;
 @property(nonatomic) CGFloat previousMajorRadius;
+@property(nonatomic) int index; // An arbitrary nteger used by the owner. isEqual: ignores it.
 
 + (instancetype)levTouchWithTouch:(UITouch *)touch inView:(UIView *)view;
 

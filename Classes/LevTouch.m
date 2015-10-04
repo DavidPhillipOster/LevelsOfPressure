@@ -20,6 +20,7 @@
   result.majorRadius = self.majorRadius;
   result.previousLocation = self.previousLocation;
   result.previousMajorRadius = self.previousMajorRadius;
+  result.index = self.index;
   return result;
 }
 

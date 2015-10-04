@@ -20,7 +20,7 @@ LevelsOfPressure is a demo app, where you can see what that's like on your own d
 
 The mapping between majorRadius and the number of circles is pretty arbitrary. You might want to experiment with that.
 
-It would be an improvement to this app to have it display the min, max, and current majorRadius. It would be easy to add NSLog(@"%g", event.majorRadius); to dump the values as a stream to the Xcode console.
+The numeric values, in the order the fingers touch the display, are graphed at the bottom.
 
 majorRadius was introduced in iOS 8.
 
