@@ -122,9 +122,13 @@
   [touches sortUsingComparator:^(id obj1, id obj2) {
     LevTouch *a = (LevTouch *)obj1;
     LevTouch *b = (LevTouch *)obj2;
-    if (a.index < b.index) {
+    if (a.location.x < b.location.x) {
       return NSOrderedAscending;
-    } if (b.index < a.index) {
+    } else if (b.location.x < a.location.x) {
+      return NSOrderedDescending;
+    } else if (a.index < b.index) {
+      return NSOrderedAscending;
+    } else if (b.index < a.index) {
       return NSOrderedDescending;
     } else {
       return NSOrderedSame;

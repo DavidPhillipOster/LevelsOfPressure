@@ -33,7 +33,7 @@ enum {
   CGRect topline = CGRectMake(0, kFontSize+1, bounds.size.width, 1.0/[[UIScreen mainScreen] scale]);
   UIRectFill(topline);
   if (self.maxRadius) {
-    NSString *s = [NSString stringWithFormat:@"%4.1f", _maxRadius];
+    NSString *s = [NSString stringWithFormat:@"max: %4.1f", _maxRadius];
     CGSize labelMaxSize = [s sizeWithAttributes:self.fontDict];
     CGPoint p = CGPointMake((bounds.size.width - labelMaxSize.width)/2, 0);
     [s drawAtPoint:p withAttributes:self.fontDict];
