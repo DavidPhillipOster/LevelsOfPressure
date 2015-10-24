@@ -13,13 +13,11 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* LevViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* LevViewController.m */; };
-		633AA70D1BC1C8B5008A2129 /* LevTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 633AA70C1BC1C8B5008A2129 /* LevTouchView.m */; settings = {ASSET_TAGS = (); }; };
-		633AA7101BC1C8BE008A2129 /* LevGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 633AA70F1BC1C8BE008A2129 /* LevGraphView.m */; settings = {ASSET_TAGS = (); }; };
-		6388AC4619D753D000644261 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6388AC4119D753D000644261 /* Default-568h@2x.png */; };
-		6388AC4719D753D000644261 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6388AC4219D753D000644261 /* Default.png */; };
-		6388AC4819D753D000644261 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6388AC4319D753D000644261 /* Default@2x.png */; };
-		63F1EF5C1BC0E402000A50B3 /* LevTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F1EF5B1BC0E402000A50B3 /* LevTouch.m */; settings = {ASSET_TAGS = (); }; };
-		63F1EF5E1BC0EB8D000A50B3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F1EF5D1BC0EB8D000A50B3 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		63E3F8CC1BDBF8BF0085E464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E3F8CB1BDBF8BF0085E464 /* Images.xcassets */; };
+		63F1EF591BC0D361000A50B3 /* LevTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F1EF581BC0D361000A50B3 /* LevTouchView.m */; };
+		63F1EF5C1BC0E402000A50B3 /* LevTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F1EF5B1BC0E402000A50B3 /* LevTouch.m */; };
+		63F1EF5E1BC0EB8D000A50B3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F1EF5D1BC0EB8D000A50B3 /* Launch Screen.storyboard */; };
+		63F1EF641BC1B8DC000A50B3 /* LevGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F1EF631BC1B8DC000A50B3 /* LevGraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,19 +30,17 @@
 		28D7ACF70DDB3853001CB0EB /* LevViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* LevelsOfPressure.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelsOfPressure.pch; sourceTree = "<group>"; };
-		633AA70B1BC1C8B5008A2129 /* LevTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevTouchView.h; sourceTree = "<group>"; };
-		633AA70C1BC1C8B5008A2129 /* LevTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevTouchView.m; sourceTree = "<group>"; };
-		633AA70E1BC1C8BE008A2129 /* LevGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevGraphView.h; sourceTree = "<group>"; };
-		633AA70F1BC1C8BE008A2129 /* LevGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevGraphView.m; sourceTree = "<group>"; };
-		6388AC4119D753D000644261 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		6388AC4219D753D000644261 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6388AC4319D753D000644261 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6388AC4B19D7557400644261 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		63DC67ED1336AC5D00B4B67E /* Lev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lev-Info.plist"; sourceTree = "<group>"; };
+		63E3F8CB1BDBF8BF0085E464 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		63F1EF571BC0D361000A50B3 /* LevTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevTouchView.h; sourceTree = "<group>"; };
+		63F1EF581BC0D361000A50B3 /* LevTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevTouchView.m; sourceTree = "<group>"; };
 		63F1EF5A1BC0E402000A50B3 /* LevTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevTouch.h; sourceTree = "<group>"; };
 		63F1EF5B1BC0E402000A50B3 /* LevTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevTouch.m; sourceTree = "<group>"; };
 		63F1EF5D1BC0EB8D000A50B3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		63F1EF5F1BC0F279000A50B3 /* LevAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevAppDelegate.h; sourceTree = "<group>"; };
-		63F1EF601BC16D6E000A50B3 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		63F1EF621BC1B8DC000A50B3 /* LevGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevGraphView.h; sourceTree = "<group>"; };
+		63F1EF631BC1B8DC000A50B3 /* LevGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevGraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +62,12 @@
 			children = (
 				63F1EF5F1BC0F279000A50B3 /* LevAppDelegate.h */,
 				1D3623250D0F684500981E51 /* LevAppDelegate.m */,
-				633AA70E1BC1C8BE008A2129 /* LevGraphView.h */,
-				633AA70F1BC1C8BE008A2129 /* LevGraphView.m */,
+				63F1EF621BC1B8DC000A50B3 /* LevGraphView.h */,
+				63F1EF631BC1B8DC000A50B3 /* LevGraphView.m */,
 				63F1EF5A1BC0E402000A50B3 /* LevTouch.h */,
 				63F1EF5B1BC0E402000A50B3 /* LevTouch.m */,
-				633AA70B1BC1C8B5008A2129 /* LevTouchView.h */,
-				633AA70C1BC1C8B5008A2129 /* LevTouchView.m */,
+				63F1EF571BC0D361000A50B3 /* LevTouchView.h */,
+				63F1EF581BC0D361000A50B3 /* LevTouchView.m */,
 				28D7ACF60DDB3853001CB0EB /* LevViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* LevViewController.m */,
 			);
@@ -89,7 +85,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				63F1EF601BC16D6E000A50B3 /* ReadMe.md */,
+				6388AC4B19D7557400644261 /* ReadMe.md */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				63DC67EB1336AC5D00B4B67E /* Resources */,
@@ -122,10 +118,8 @@
 		63DC67EB1336AC5D00B4B67E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				63E3F8CB1BDBF8BF0085E464 /* Images.xcassets */,
 				63DC67ED1336AC5D00B4B67E /* Lev-Info.plist */,
-				6388AC4119D753D000644261 /* Default-568h@2x.png */,
-				6388AC4219D753D000644261 /* Default.png */,
-				6388AC4319D753D000644261 /* Default@2x.png */,
 				63F1EF5D1BC0EB8D000A50B3 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
@@ -158,6 +152,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 2X3M9VFULE;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LevelsOfPressure" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -183,10 +182,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6388AC4819D753D000644261 /* Default@2x.png in Resources */,
-				6388AC4619D753D000644261 /* Default-568h@2x.png in Resources */,
+				63E3F8CC1BDBF8BF0085E464 /* Images.xcassets in Resources */,
 				63F1EF5E1BC0EB8D000A50B3 /* Launch Screen.storyboard in Resources */,
-				6388AC4719D753D000644261 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +196,8 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* LevAppDelegate.m in Sources */,
-				633AA70D1BC1C8B5008A2129 /* LevTouchView.m in Sources */,
-				633AA7101BC1C8BE008A2129 /* LevGraphView.m in Sources */,
+				63F1EF591BC0D361000A50B3 /* LevTouchView.m in Sources */,
+				63F1EF641BC1B8DC000A50B3 /* LevGraphView.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* LevViewController.m in Sources */,
 				63F1EF5C1BC0E402000A50B3 /* LevTouch.m in Sources */,
 			);
@@ -213,6 +210,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -222,7 +221,7 @@
 				GCC_PREFIX_HEADER = Classes/LevelsOfPressure.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Lev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.LevelsOfPressure;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turbozen$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LevelsOfPressure;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -232,6 +231,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -239,7 +240,7 @@
 				GCC_PREFIX_HEADER = Classes/LevelsOfPressure.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Lev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.LevelsOfPressure;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turbozen$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LevelsOfPressure;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
