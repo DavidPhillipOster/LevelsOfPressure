@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* LevViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* LevViewController.m */; };
+		6385F3BA1DD6BBF500EAB95A /* Lev+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6385F3B91DD6BBF500EAB95A /* Lev+UIColor.m */; };
 		63E3F8CC1BDBF8BF0085E464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E3F8CB1BDBF8BF0085E464 /* Images.xcassets */; };
 		63F1EF591BC0D361000A50B3 /* LevTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F1EF581BC0D361000A50B3 /* LevTouchView.m */; };
 		63F1EF5C1BC0E402000A50B3 /* LevTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F1EF5B1BC0E402000A50B3 /* LevTouch.m */; };
@@ -30,6 +31,8 @@
 		28D7ACF70DDB3853001CB0EB /* LevViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* LevelsOfPressure.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelsOfPressure.pch; sourceTree = "<group>"; };
+		6385F3B81DD6BBE300EAB95A /* Lev+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lev+UIColor.h"; sourceTree = "<group>"; };
+		6385F3B91DD6BBF500EAB95A /* Lev+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Lev+UIColor.m"; sourceTree = "<group>"; };
 		6388AC4B19D7557400644261 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		63DC67ED1336AC5D00B4B67E /* Lev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lev-Info.plist"; sourceTree = "<group>"; };
 		63E3F8CB1BDBF8BF0085E464 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -60,6 +63,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6385F3B81DD6BBE300EAB95A /* Lev+UIColor.h */,
+				6385F3B91DD6BBF500EAB95A /* Lev+UIColor.m */,
 				63F1EF5F1BC0F279000A50B3 /* LevAppDelegate.h */,
 				1D3623250D0F684500981E51 /* LevAppDelegate.m */,
 				63F1EF621BC1B8DC000A50B3 /* LevGraphView.h */,
@@ -197,6 +202,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* LevAppDelegate.m in Sources */,
 				63F1EF591BC0D361000A50B3 /* LevTouchView.m in Sources */,
+				6385F3BA1DD6BBF500EAB95A /* Lev+UIColor.m in Sources */,
 				63F1EF641BC1B8DC000A50B3 /* LevGraphView.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* LevViewController.m in Sources */,
 				63F1EF5C1BC0E402000A50B3 /* LevTouch.m in Sources */,
@@ -221,7 +227,7 @@
 				GCC_PREFIX_HEADER = Classes/LevelsOfPressure.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Lev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.turbozen$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turbozen.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LevelsOfPressure;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -240,7 +246,7 @@
 				GCC_PREFIX_HEADER = Classes/LevelsOfPressure.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Lev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.turbozen$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turbozen.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = LevelsOfPressure;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

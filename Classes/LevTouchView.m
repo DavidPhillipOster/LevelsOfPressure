@@ -3,6 +3,7 @@
 
 #import "LevTouchView.h"
 
+#import "Lev+UIColor.h"
 #import "LevGraphView.h"
 #import "LevTouch.h"
 
@@ -36,6 +37,27 @@
 }
 
 @end
+
+static void DrawPie(CGContextRef c, CGPoint p, CGFloat value, CGFloat normalValue) {
+  value = MAX((CGFloat) 0, MIN((CGFloat) 1, value));
+  CGFloat radius = 70;
+  CGContextBeginPath(c);
+  CGContextMoveToPoint(c, p.x, p.y);
+  CGContextAddArc(c, p.x, p.y, radius, -90 * M_PI/180, -90 * M_PI/180 + (value * 2*M_PI), 0);
+  CGContextClosePath(c);
+  UIColor *color;
+  if (value < (CGFloat) normalValue) {
+    color = [UIColor lev_low];
+  } else if (value < (CGFloat) 7/8.) {
+    color = [UIColor lev_middle];
+  } else if (value < (CGFloat) 15/16.) {
+    color = [UIColor lev_warning];
+  } else {
+    color = [UIColor lev_danger];
+  }
+  [color set];
+  CGContextFillPath(c);
+}
 
 @interface LevTouchView()
 // The model of this app is this NSSet of LevTouch.
@@ -78,8 +100,12 @@
 - (void)drawRect:(CGRect)rect {
   CGContextRef c = UIGraphicsGetCurrentContext();
   CGContextSetLineWidth(c, 1);
-  [[UIColor whiteColor] set];
   for (LevTouch *touch in self.myTouches) {
+    if (0.0 != touch.maxForce) {
+      //  Apple documents that '1' is a normal toucb. Let's take anything less than 0.8 as light.
+      DrawPie(c, touch.location, touch.force/touch.maxForce, 0.8/touch.maxForce);
+    }
+    [[UIColor whiteColor] set];
     CGFloat radius = 35;
     CGFloat maxRadius = 10;
     do {
@@ -101,6 +127,8 @@
       touch.majorRadius = newTouch.majorRadius;
       touch.previousLocation = newTouch.previousLocation;
       touch.previousMajorRadius = newTouch.previousMajorRadius;
+      touch.force = newTouch.force;
+      touch.maxForce = newTouch.maxForce;
       break;
     }
   }

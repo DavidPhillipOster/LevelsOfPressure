@@ -1,5 +1,7 @@
 ## Levels of Pressure
 
+11/11/2016 - If run on a 3D Touch device, shows the also shows the 3D touch value as a colored pie
+graph.
 10/24/2015 - asset catalogs. Icon.
 10/03/2015 - Demonstrates that Pre-6s hardware can detect the difference
 between a light touch and a heavy one. iOS 8 and up.

@@ -5,7 +5,7 @@
 
 @interface LevGraphView : UIView
 
-@property(nonatomic) NSArray *touches;  // input: sorted array of LevTouche
+@property(nonatomic) NSArray *touches;  // input: sorted array of LevTouch
 
 @property(nonatomic) CGFloat maxRadius; // input: the max we've seen so far.
 
