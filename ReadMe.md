@@ -1,7 +1,7 @@
 ## Levels of Pressure
 
-11/11/2016 - version 1.1 If run on a 3D Touch device, shows the also shows the 3D touch value as a colored pie
-chart.
+11/11/2016 - version 1.1 If run on a 3D Touch device, also shows the 3D touch value as a colored pie
+chart, where maximum pressure is a 360° sweep.
 
 10/24/2015 - asset catalogs. Icon.
 
